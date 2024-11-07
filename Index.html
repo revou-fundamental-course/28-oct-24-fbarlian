@@ -1,14 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS\Style.css">
-</head>
-<body>
-    <!-- header start -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
 
-    <!-- header end -->
-</body>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="CSS\Style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- section perhitungan start -->
+      <section>
+        <div>
+          <header>
+            <h1>Kalkulator BMI</h1>
+          </header>
+          <article>
+            <p>
+              Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
+              bentuk tubuh yang menunjang penampilan, berat badan ideal juga
+              menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk,
+              hitung sekarang di kalkulator BMI.
+            </p>
+          </article>
+        </div>
+
+        <!-- perhitungan BMI start -->
+        <form name="form-perhitungan" action="" method="post">
+          <p>Jenis Kelamin</p>
+
+          <input
+            type="radio"
+            id="pria"
+            name="jenis-kelamin"
+            value="Pria"
+            required
+          />
+          <label for="pria">Pria</label>
+          <input
+            type="radio"
+            id="wanita"
+            name="jenis-kelamin"
+            value="Wanita"
+            required
+          />
+          <label for="wanita">Wanita</label>
+          <br />
+          <br />
+
+          <label for="beratbadan">Berat Badan (kg)</label>
+
+          <br />
+
+          <div class="input-number">
+            <img
+              src="Asset/app_registration_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="pencil"
+            />
+            <input
+              type="number"
+              id="beratbadan"
+              placeholder="Masukkan Berat Badan Anda"
+              required
+              autofocus
+              min="1"
+            />
+          </div>
+
+          <br />
+
+          <label for="usia">Usia (tahun)</label>
+
+          <br />
+
+          <div class="input-number">
+            <img
+              src="Asset/app_registration_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="pencil"
+            />
+            <input
+              type="number"
+              id="usia"
+              placeholder="Masukkan Usia Anda"
+              required
+              min="1"
+            />
+          </div>
+
+          <br />
+
+          <label for="tinggibadan">Tinggi Badan (cm)</label>
+
+          <br />
+
+          <div class="input-number">
+            <img
+              src="Asset/app_registration_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="pencil"
+            />
+            <input
+              type="number"
+              id="tinggibadan"
+              placeholder="Masukkan Tinggi Badan Anda"
+              required
+              min="1"
+            />
+          </div>
+
+          <br />
+
+          <button type="submit" oclick="submitdata" id="hitungbmi">
+            Hitung BMI
+          </button>
+          <button type="reset" id="reset">Reset</button>
+        </form>
+        <!-- perhitungan BMI end -->
+
+        <div>
+          <header>
+            <h2>Keunggulan Fitur</h2>
+          </header>
+
+          <article>
+            <p>
+              1. Menghitung berat badan<br />
+              2. Menentukan kategori berat badan ideal atau tidak<br />
+              3. Mempersiapkan program penurunan berat badan<br /><br />
+              Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita
+              hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini)
+              dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+              selain berkonsultasi dengan orang yang memenuhi syarat seperti
+              dokter.<br /><br />Kalkulator akan memberi anda gambaran tentang
+              perbandingan berat badan anda dengan nilai umum. Indeks Masa Tubuh
+              (BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi
+              dengan kuadrat tinggi badan anda (dalam meter) atau BMI =
+              Kg/m<sup>2</sup>.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- section perhitungan end -->
+
+      <!-- section hasil start -->
+      <section>
+        <header>
+          <h1>Hasil</h1>
+        </header>
+
+        <!-- hasil perhitungan BMI start -->
+        <form name="hasil-perhitungan">
+          <div class="perhitungan-bmi">
+            <p id="hasil-perhitungan">Hasil Perhitungan BMI Anda</p>
+            <p id="hasil"></p>
+            <p id="keterangan-hasil">
+              Anda Memiliki <span id="1">Berat Badan Berlebih</span>
+            </p>
+            <button type="button" id="download-hasil">
+              Download Hasil BMI
+            </button>
+          </div>
+        </form>
+        <!-- hasil perhitungan BMI end -->
+
+        <br />
+
+        <a href="https://www.halodoc.com/tanya-dokter/cari?query=gizi"
+          ><button type="button">Konsultasi Ahli Gizi Via Aplikasi</button></a
+        >
+
+        <a
+          href="https://www.halodoc.com/cari-dokter/spesialis/clinical-nutritionist"
+          ><button type="button">Registrasi Online Ahli Gizi</button></a
+        >
+
+        <article>
+          <p>
+            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
+            tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih
+            lanjut mengenai resiko dan kekhawatiran anda terkait dengan berat
+            badan anda.
+          </p>
+        </article>
+
+        <!-- rekomendasi hasil BMI start -->
+        <form>
+          <p id="penyakit">
+            Beberapa penyakit yang berasal dari <span id="2">Kegemukan</span>
+          </p>
+          <ul id="akibat-penyakit" type="none">
+            <li>Diabetes</li>
+            <li>Hipertensi</li>
+            <li>Sakit Jantung</li>
+            <li>Ostheoarthritis</li>
+          </ul>
+          <div class="konsultasi-registrasi">
+            <a href="https://www.halodoc.com/tanya-dokter"
+              ><button type="button" id="konsultasi">
+                Konsultasi Dokter Via Aplikasi
+              </button></a
+            >
+
+            <a href="https://www.halodoc.com/rumah-sakit"
+              ><button type="button" id="registrasi">
+                Registrasi Online Sekarang
+              </button></a
+            >
+          </div>
+        </form>
+        <!-- rekomendasi hasil BMI end -->
+
+        <footer>
+          <p>Download Aplikasi</p>
+          <div class="download">
+            <a href="https://play.google.com/store/games?hl=id">
+              <img
+                src="Asset/google-play-badge-logo-svgrepo-com.jpg"
+                alt="playstore"
+                id="android"
+            /></a>
+
+            <a href="https://www.apple.com/app-store/">
+              <img
+                src="Asset/download-on-the-app-store-apple-logo-svgrepo-com.jpg"
+                alt="applestore"
+                id="apple"
+            /></a>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <!-- link jacascript -->
+    <script src="JS\Script.js"></script>
+  </body>
 </html>
