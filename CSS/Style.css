@@ -1,1 +1,148 @@
 /* Isian CSS */
+
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+/* style display website */
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+main section {
+  width: 550px;
+}
+
+/* style form perhitungan */
+form {
+  background: #f8f8ff;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+}
+
+form .input-number {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  gap: 4px;
+}
+
+form .input-number #beratbadan {
+  border: 1px solid #d3d3d3;
+  width: 30rem;
+  height: 20px;
+  border-radius: 5px;
+}
+
+form .input-number #usia {
+  border: 1px solid #d3d3d3;
+  width: 30rem;
+  height: 20px;
+  border-radius: 5px;
+}
+
+form .input-number #tinggibadan {
+  border: 1px solid #d3d3d3;
+  width: 30rem;
+  height: 20px;
+  border-radius: 5px;
+}
+
+form .perhitungan-bmi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+form #hasil-perhitungan {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+form #hasil {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+form #keterangan-hasil {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form #penyakit {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+form #akibat-penyakit {
+  text-align: center;
+}
+
+/* style for button */
+button {
+  height: 27px;
+  font-size: 12px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: rgb(57, 55, 55);
+  color: white;
+  font-weight: 700;
+  border: 2px solid whitesmoke;
+}
+
+form .konsultasi-registrasi {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+/* style footer */
+footer p {
+  text-align: center;
+}
+
+footer .download {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer img {
+  width: 10rem;
+}
+
+img:hover {
+  scale: 110%;
+}
+
+/* style responsive */
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* handphone */
+@media only screen and (max-width: 430px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
